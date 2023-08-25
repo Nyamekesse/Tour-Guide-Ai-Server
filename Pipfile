@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pinecone-client = "*"
+farm-haystack = "==1.17.2"
+sentence-transformers = "*"
+black = "*"
+torch = "*"
+torchvision = "*"
+torchaudio = "*"
+flask = "*"
+flask-bcrypt = "*"
+python-decouple = "*"
+flask-jwt-extended = "*"
+flask-cors = "*"
+flask-migrate = "*"
+shortuuid = "*"
+flask-sqlalchemy = "*"
+flask-marshmallow = "*"
+sqlalchemy = "*"
+psycopg2-binary = "*"
+marshmallow-sqlalchemy = "==0.23.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
