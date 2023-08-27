@@ -6,6 +6,7 @@ from flask_jwt_extended import JWTManager
 from flask_bcrypt import Bcrypt
 from blueprints.query_route import query_bp
 from blueprints.auth_routes import auth_bp
+from blueprints.sentiment_analysis_routes import sentiment_bp
 
 
 def create_app():
@@ -25,5 +26,6 @@ def create_app():
         migrate.init_app(app, db)
         app.register_blueprint(auth_bp)
         app.register_blueprint(query_bp)
+        app.register_blueprint(sentiment_bp)
 
     return app

@@ -23,6 +23,8 @@ flask-marshmallow = "*"
 sqlalchemy = "*"
 psycopg2-binary = "*"
 marshmallow-sqlalchemy = "==0.23.1"
+pandas = "*"
+transformers = "*"
 
 [dev-packages]
 
