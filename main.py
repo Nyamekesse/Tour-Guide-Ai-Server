@@ -1,6 +1,6 @@
 from flask import Flask
 from config import DevConfig, ProConfig, TestConfig
-from exts import db, marshmallow, migrate
+from exts import db
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from flask_bcrypt import Bcrypt
@@ -21,9 +21,7 @@ def create_app():
         CORS(app)
         Bcrypt(app)
         JWTManager(app)
-        marshmallow.init_app(app)
         db.init_app(app)
-        migrate.init_app(app, db)
         app.register_blueprint(auth_bp)
         app.register_blueprint(query_bp)
         app.register_blueprint(sentiment_bp)

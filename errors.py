@@ -36,6 +36,11 @@ def handle_not_processable_error(msg):
     return make_response(jsonify({"success": False, "message": message}), 422)
 
 
+def handle_conflict_error(msg):
+    message = msg if msg else "Entry already exist"
+    return make_response(jsonify({"success": False, "message": message}), 409)
+
+
 def handle_internal_server_error(msg):
     message = msg if msg else "Internal server error"
     return make_response(jsonify({"success": False, "message": message}), 500)
